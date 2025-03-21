@@ -6,18 +6,19 @@ public class Professor {
 
 	public String nome;
 	public String horario;
-	public Disciplina grade;
+	public List<Disciplina> grade;
 	public int id;
 
 	
 	
-	public Professor(String nome, String horario, Disciplina grade, int id) {
+	public Professor(String nome, String horario, List<Disciplina> grade, int id) {
 		this.nome = nome;
 		this.horario = horario;
 		this.grade = grade;
 		this.id = id;
 	}
-	public String getNome() {
+	
+    public String getNome() {
 		return nome;
 	}
 	public void setNome(String nome) {
@@ -37,16 +38,16 @@ public class Professor {
 		this.id = id;
 	}
 	
-	public List<String> getGrade() {
+	public List<Disciplina> getGrade() {
 		return grade;
 	}
-	public void setGrade(Disciplina disciplina) {
+	public void setGrade(List<Disciplina> disciplina) {
 		this.grade = disciplina;
 	}
-	public void addDisciplina(Disciplina disciplina) {
+	public void addDisciplina(List<Disciplina> disciplina) {
 		setGrade(disciplina);
 	}
-	public List<String> getHoraDisciplina(List<String> grade) {
+	public void getHoraDisciplina(List<String> grade) {
 		
 	}
 } 
