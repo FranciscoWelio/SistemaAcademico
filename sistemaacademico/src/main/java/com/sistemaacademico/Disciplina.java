@@ -11,6 +11,15 @@ public class Disciplina {
     private Professor professor;
     
     public Disciplina(String nome, String horario, Professor professor) {
+        if (nome == null || nome.trim().isEmpty()) {
+            throw new IllegalArgumentException("O nome da disciplina não pode ser nulo ou vazio.");
+        }
+        if (horario == null || horario.trim().isEmpty()) {
+            throw new IllegalArgumentException("O horário da disciplina não pode ser nulo ou vazio.");
+        }
+        if (professor == null) {
+            throw new NullPointerException("A disciplina deve ter um professor associado.");
+        }
         this.nome = nome;
         this.horario = horario;
         this.professor = professor;
@@ -30,6 +39,9 @@ public class Disciplina {
     }
     
     public void adicionarAluno(Aluno aluno) {
+        if (aluno == null) {
+            throw new NullPointerException("O aluno não pode ser nulo.");
+        }
         alunos.add(aluno);
     }
     
