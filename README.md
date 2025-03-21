@@ -1,6 +1,6 @@
 # SistemaAcademico
 Lab 2 MAP
 ---
-  - Felipe
+  - Felipe Eduardo
   - Zeton
   - Francisco Welio
